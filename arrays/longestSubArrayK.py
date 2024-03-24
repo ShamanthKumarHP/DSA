@@ -49,28 +49,33 @@ def positiveLSSK(nums, k):
     total_sum = nums[0]
     while (j < n):
         # strivers
-        # while (total_sum > k and i <= j) :
-        #     total_sum = total_sum - nums[i]
-        #     i = i + 1
-
-        # if total_sum == k :
-        #     longss =  max(longss, j - i + 1)
-
-        # j = j + 1
-        # if j < n:
-        #     total_sum = total_sum + nums [j]
-
-        #shamanth
-        if total_sum == k:
-            longss = max(longss, j - i + 1)
-
-        if total_sum > k and i < j:
+        # time complexity, below while loop will gets added
+        while (total_sum > k and i <= j) :
             total_sum = total_sum - nums[i]
             i = i + 1
-            continue
+
+        if total_sum == k :
+            longss =  max(longss, j - i + 1)
+
         j = j + 1
         if j < n:
             total_sum = total_sum + nums [j]
+
+        #shamanth
+        # if total_sum == k:
+        #     longss = max(longss, j - i + 1)
+
+        # if total_sum > k and i < j:
+        #     total_sum = total_sum - nums[i]
+        #     i = i + 1
+        #     continue
+        # j = j + 1
+        # if j < n:
+        #     total_sum = total_sum + nums [j]
     return longss
+
+# TC 
+# one o(n) for right pointer, one o(n) for left pointer worst case.
+# o(2n) => o(n)
 
 print(positiveLSSK(arr , k))
