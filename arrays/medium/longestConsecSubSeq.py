@@ -22,3 +22,6 @@ print(longestConsecutive(nums))
 
 # when i'm in k, check if k - 1 exists, dont start search from 4,3,2
 # if doesnt exits, then assume thats the first element and check for next elements
+# tc= n for dict, maximum it will take 2n inside for loop.
+# so TC = 3N, SC = N
+
