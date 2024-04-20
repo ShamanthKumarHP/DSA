@@ -1,3 +1,13 @@
+# divide and conquer
+# with two pointer
+# takes a pivot element and place in its correct position of overall sorted array
+# 
+
+# find pivot
+# place in it at correct place -> partition index
+# sort left of the array
+# sort right of the array
+
 def quickSort(arr,low, high):
     if high - low <= 0:
         return

@@ -1,4 +1,10 @@
-#takes an alement and places in its correct position
+# takes an alement and places in its correct position for that particaluar subarray
+# ask elements where it should be, and shift element to the left of the array
+# -
+# --
+# ---
+# ----
+# -----
 
 # def insertion_sort(arr):
 #     high = len(arr)
