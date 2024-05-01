@@ -15,14 +15,24 @@ class Solution:
             mid2 = left_half - mid1
             l1, l2, r1, r2 = float('-inf'), float('-inf'), float('inf'), float('inf')
 
-            # need to dig deep
+            # mid1 will be always pointing to r1
+            # mid2 will be always pointing to r2
+
+            # if all elements of nums1 is present in left side 
+            # then mid1 will be equal to n
+            # and we wont be having nums1[n] element in nums
+            # then its value should be maximum -> float('inf')
             if mid1 < n1:
                 r1 = nums1[mid1]
+            else:
+                print(mid1)
+                print(mid2)
             if mid2 < n2:
                 r2 = nums2[mid2]
-            if mid1 - 1 >= 0:
+            # if mid1 becomes 0, then l1 wont be there
+            if mid1 > 0:
                 l1 = nums1[mid1 - 1]
-            if mid2 - 1 >= 0:
+            if mid2 > 0:
                 l2 = nums2[mid2 - 1]
 
             if l1 <= r2 and l2 <= r1:
@@ -38,8 +48,10 @@ class Solution:
         return 0
     
 obj = Solution()
-nums1 = [5,6]
-nums2 = [1,2,3,4]
+# nums1 = [5,6]
+# nums2 = [1,2,3,4,5,6,7,8]
+nums1 = [1,2,3,4,5,6,7,8]
+nums2 = [11,12]
 print(obj.findMedianSortedArrays(nums1, nums2))
 
 
