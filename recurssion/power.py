@@ -1,3 +1,4 @@
+# NOTE power
 x = 2
 n = 3
 def calculatePower(x,n):
@@ -17,3 +18,14 @@ def calculate_power(x,n):
 
 print(calculatePower(x,n))
 print(calculate_power(x,n))
+
+# maximum recursion depth will exceed if its not logN
+def myPow(x, n):
+    if n == 0:
+        return 1
+    if n < 0:
+        return 1 / (x * myPow(x, -n -1))
+    elif n%2 == 0:
+        a = myPow(x, n//2)
+        return a*a
+    return x * myPow(x, n-1)

@@ -38,17 +38,7 @@
 #     return n * factN(n-1)
 # print(factN(n))
 
-# arr = [1,2,3,4,5]
-
-# def reverse(arr,i,n):
-#     if(i>=n):
-#         print(arr)
-#         return
-#     arr[i+1],arr [n-(i+1)] = arr [n-(i+1)], arr [i+1]
-#     return reverse(arr,i+1,n-i+1)
-# i = 0
-# n = len(arr)-1
-# reverse(arr,i,n)
+arr = [1,2,3,4,5,6]
 
 # def reverse(i,n):
 #     if i>n/2:
@@ -92,3 +82,4 @@
 #         return n
 #     return fibRec(n-1) + fibRec(n-2)
 # print(fibRec(5))
+# TC : 2**N
