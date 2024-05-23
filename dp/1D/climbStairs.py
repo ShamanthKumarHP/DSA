@@ -3,6 +3,12 @@
 # 2. do all the stuffs
 # 3. take whatever they asked min, max, or count
 
+
+# for tabulation
+# 1. Declare base case
+# 2. express all states in for loop
+# 3. copy the recurrence code and write
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         # at every step i can take either 1 step or 2 step
