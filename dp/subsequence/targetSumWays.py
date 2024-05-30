@@ -42,15 +42,17 @@ class Solution:
     def TfindTargetSumWays(self, nums, target: int) -> int:
         dp = [[0 for j in range(target+1)] for i in range(len(nums))] 
         
-        # sum 0 can become at any index
-        for i in range(len(nums)):
-            dp[i][0] = 1
-
-        if nums[0] <= target:
-            dp[0][nums[0]] = 1
+        # method 1 
+        # if i'm at zeroth index and if the value is also 0, and if i have to form sum 0
+        # then even if i take or not take sum will be 0
+        if nums[0] == 0:
+            dp[0][0] = 2
+        else:
+            if nums[0] <= target:
+                dp[0][nums[0]] = 1
         
         for i in range(1, len(nums)):
-            for tar in range(1, target+1):
+            for tar in range(0, target+1):
                 notPick = dp[i-1][tar]
 
                 pick = 0
@@ -58,21 +60,34 @@ class Solution:
                     pick = dp[i-1][tar-nums[i]]
                 
                 dp[i][tar] = pick + notPick
+        ans = dp[-1][-1]
+         
+        # Handle if zero is there method 2
+        # # check in how many ways we can represent 0
+        # # if there are two zeros, then [0], [0], [0,0], []
+        # # that is 2 power n
+
+        # # before returning count number of zero is array
+        # zero_count = 0
+        # for i in nums:
+        #     if i == 0:
+        #         zero_count += 1
         
-        return dp[-1][-1]
+        # ans = ans * (2 ** zero_count)
+        return ans
     
     def SfindTargetSumWays(self, nums, target: int) -> int:
         prev = [0 for i in range(target+1)]
 
-        prev[0] = 1
-
-        if nums[0] <= target:
-            prev[nums[0]] = 1
+        if nums[0] == 0:
+            prev[0] = 2
+        else:
+            if nums[0] <= target:
+                prev[nums[0]] = 1
         
         for r in range(1, len(nums)):
             curr = [0 for i in range(target+1)]
-            curr[0] = 1
-            for tar in range(1, target+1):
+            for tar in range(0, target+1):
                 notPick = prev[tar]
 
                 pick = 0
@@ -82,11 +97,14 @@ class Solution:
                 curr[tar] = pick + notPick
 
             prev = curr[:]
-        return prev[-1]
+    
+        ans = prev[-1]
+        return ans
              
 instance = Solution()
-nums = [1,1,1,1,1]
-target = 3
+# TODO
+nums = [0,0,1]
+target = 1
 
 print(instance.RfindTargetSumWays(nums, target))
 print(instance.MfindTargetSumWays(nums, target))
