@@ -46,10 +46,12 @@ class Solution:
         # if i'm at zeroth index and if the value is also 0, and if i have to form sum 0
         # then even if i take or not take sum will be 0
         if nums[0] == 0:
-            dp[0][0] = 2
+            dp[0][0] = 2 # pick + not pick
         else:
-            if nums[0] <= target:
-                dp[0][nums[0]] = 1
+            dp[0][0] = 1 # not pick
+        
+        if nums[0] <= target:
+            dp[0][nums[0]] = 1
         
         for i in range(1, len(nums)):
             for tar in range(0, target+1):
@@ -82,8 +84,10 @@ class Solution:
         if nums[0] == 0:
             prev[0] = 2
         else:
-            if nums[0] <= target:
-                prev[nums[0]] = 1
+            prev[0] = 1
+        
+        if nums[0] <= target:
+            prev[nums[0]] = 1
         
         for r in range(1, len(nums)):
             curr = [0 for i in range(target+1)]
@@ -103,8 +107,8 @@ class Solution:
              
 instance = Solution()
 # TODO
-nums = [0,0,1]
-target = 1
+nums = [1,1,1,1,1]
+target = 3
 
 print(instance.RfindTargetSumWays(nums, target))
 print(instance.MfindTargetSumWays(nums, target))
