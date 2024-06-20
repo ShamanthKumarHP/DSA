@@ -1,0 +1,18 @@
+DP-MCM-Squares
+
+dp = [ [0] * cols] * rows # not good for 2d dp. Only 1 d is good. copy by reference it is
+use below
+dp2 =  [[0 for j in range(cols)] for i in range(rows)]
+for i in range(rows):
+    dp[i][0] = matrix[i][0]
+    dp2[i][0] = matrix[i][0]
+
+
+
+strings
+note for string[1:-1:-1] does not work, as it represent last index - middle value
+dont fetch value of first element like this
+
+
+
+
