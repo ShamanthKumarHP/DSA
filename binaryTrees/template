@@ -1,0 +1,33 @@
+class Tree():
+    def __init__(self, value=None):
+        self.val = value
+        self.left = None
+        self.right = None
+    
+def to_binary_tree(items):
+    if not items:
+        return None
+    it = iter(items)
+    root = Tree(next(it))
+    q = [root]
+    for node in q:
+        val = next(it, None)
+        if val is not None:
+            node.left = Tree(val)
+            q.append(node.left)
+        val = next(it, None)
+        if val is not None:
+            node.right = Tree(val)
+            q.append(node.right)
+    return root
+
+lst = [1,2,10,3,4,13,14]
+root = to_binary_tree(lst)
+# OR
+TreeNode = Tree(1)
+TreeNode.left = Tree(2)
+TreeNode.right = Tree(10)
+TreeNode.left.left = Tree(3)
+TreeNode.left.right = Tree(4)
+TreeNode.right.left = Tree(13)
+TreeNode.right.right = Tree(14)
