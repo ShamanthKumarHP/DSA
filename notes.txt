@@ -14,5 +14,6 @@ note for string[1:-1:-1] does not work, as it represent last index - middle valu
 dont fetch value of first element like this
 
 
+better to pass variables rather than keeping it as class variables
 
 

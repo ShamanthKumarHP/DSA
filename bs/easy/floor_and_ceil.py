@@ -3,6 +3,7 @@
 # floor = largest number which is <=X
 # ceil = smallest number which is >=X
 
+# lb is nothing but ceil
 
 def upperBound(arr, target):
     low = 0
