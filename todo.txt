@@ -1,2 +1,5 @@
 1. https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/description/
 return (1 << lh) - 1
+
+2. L7. Sort a LinkedList of 0's, 1's and 2's
+https://www.youtube.com/watch?v=gRII7LhdJWc
