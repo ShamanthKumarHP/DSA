@@ -17,3 +17,11 @@ dont fetch value of first element like this
 better to pass variables rather than keeping it as class variables
 
 
+3. Topo sort is strictly for DAG, do not apply for non acyclic graph to check if it has cycle
+
+4. To check if it has cycle, better to check with Kahn's algo or DFS algo
+
+undirected unit weight graph -> BFS
+undirected positive weight graph -> Dijktra
+DAG -> Toposort
+DAG/DCG -> Dijktra

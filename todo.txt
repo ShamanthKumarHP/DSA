@@ -3,3 +3,19 @@ return (1 << lh) - 1
 
 2. L7. Sort a LinkedList of 0's, 1's and 2's
 https://www.youtube.com/watch?v=gRII7LhdJWc
+
+
+work with priority queues module
+
+remaining:
+graph = 27          day 2 Wed, Thu, Fri
+stack&q = 30        day 2 Fri, Sat, Sun
+heaps = 17          day 2 Mon, Tues
+sliding2p = 12      day 1 Wed, Thu
+bit = 18            day 2 Fri, Sat, Sun
+greedyAlgo = 16     day 2 Mon, Tue, Wed
+tries = 7           day 1 Thu, Fri
+strings = 9         day 1 Sat, Sun
+
+
+total = 136

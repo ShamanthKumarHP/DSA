@@ -36,7 +36,6 @@ class Solution:
         for pre, crs in prerequisites:
             adj_list[crs].append(pre)
             
-        print(adj_list)
         
         return self.kahn(numCourses, adj_list)
 
