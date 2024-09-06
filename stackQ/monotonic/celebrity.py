@@ -16,7 +16,7 @@ class Celebrity:
     def best(self, n, matrix):
         top = 0
         bottom = n-1
-        while top < bottom:
+        while top < bottom: #o(N)
             if matrix[top][bottom] == 1:
                 top += 1
             elif matrix[bottom][top] == 1:
@@ -29,7 +29,7 @@ class Celebrity:
         if top < bottom:
             return -1
         
-        for i in range(n):
+        for i in range(n): #o(N)
             # scan whole row and column
             if i == top:
                 continue
