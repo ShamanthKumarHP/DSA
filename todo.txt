@@ -4,14 +4,6 @@ return (1 << lh) - 1
 2. L7. Sort a LinkedList of 0's, 1's and 2's
 https://www.youtube.com/watch?v=gRII7LhdJWc
 
-
-work with priority queues module
-
-remaining:
-stack&q = 30        
-heaps = 17          
-sliding2p = 12      
-bit = 18            
-greedyAlgo = 16     
-tries = 7           
-strings = 9         
+3. Follow up https://leetcode.com/problems/find-median-from-data-stream/description/
+https://leetcode.com/problems/find-median-from-data-stream/solutions/286238/java-simple-code-follow-up
+work with priority queues module 
